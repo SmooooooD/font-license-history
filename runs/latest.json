@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-10-20T06:18:14Z",
+  "results": [
+    {
+      "id": "pretendard",
+      "status": "ok",
+      "change": "CHANGED"
+    },
+    {
+      "id": "suit",
+      "status": "robots_disallowed",
+      "change": "same"
+    },
+    {
+      "id": "wanted-sans",
+      "status": "ok",
+      "change": "same"
+    },
+    {
+      "id": "spoqa-han-sans-neo",
+      "status": "ok",
+      "change": "same"
+    },
+    {
+      "id": "nanum",
+      "status": "thin_page",
+      "change": "same"
+    },
+    {
+      "id": "gmarket-sans",
+      "status": "ok",
+      "change": "same"
+    },
+    {
+      "id": "cafe24",
+      "status": "ok",
+      "change": "same"
+    },
+    {
+      "id": "jalnan",
+      "status": "ok",
+      "change": "same"
+    },
+    {
+      "id": "baemin",
+      "status": "robots_disallowed",
+      "change": "same"
+    },
+    {
+      "id": "kakao",
+      "status": "error: URLError",
+      "change": "same"
+    },
+    {
+      "id": "s-core-dream",
+      "status": "error: URLError",
+      "change": "same"
+    }
+  ]
+}
