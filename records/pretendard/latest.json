@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-10-20T06:18:14Z",
-  "url": "https://github.com/orioncactus/pretendard",
+  "checked_at": "2026-10-20T19:22:10Z",
+  "url": "https://raw.githubusercontent.com/orioncactus/pretendard/main/LICENSE",
   "status": "ok",
-  "method": "html",
-  "sha256": "502c7b6936bbfeb1a88307b5712da9945ed5c045c278a9fa16196cefa5e4b6ef",
-  "text_length": 10638,
+  "method": "browser",
+  "sha256": "2b00ce838d4eacf78084f6f3467c25a03efffccc2f234a92fd820f815b4412d5",
+  "text_length": 4793,
   "wayback": "requested"
 }

@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-20T06:18:14Z",
+  "checked_at": "2026-10-20T19:22:10Z",
   "results": [
     {
       "id": "pretendard",
@@ -14,12 +14,12 @@
     {
       "id": "wanted-sans",
       "status": "ok",
-      "change": "same"
+      "change": "CHANGED"
     },
     {
       "id": "spoqa-han-sans-neo",
       "status": "ok",
-      "change": "same"
+      "change": "CHANGED"
     },
     {
       "id": "nanum",
