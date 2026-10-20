@@ -39,7 +39,16 @@ def query(batch):
     return json.loads(body)["keywordList"]
 
 
+def diagnose():
+    """키 값은 출력하지 않고, 형태(길이·숫자 여부)만 출력해 잘못 넣은 칸이 있는지 본다."""
+    for name in ("NAVER_CUSTOMER_ID", "NAVER_ACCESS_LICENSE", "NAVER_SECRET_KEY"):
+        v = os.environ.get(name, "")
+        print(f"{name}: length={len(v.strip())}, digits_only={v.strip().isdigit()}, "
+              f"had_whitespace={v != v.strip()}, empty={not v.strip()}")
+
+
 def main():
+    diagnose()
     words = [w.replace(" ", "") for w in sys.argv[1].split(",") if w.strip()]
     rows = []
     for i in range(0, len(words), 5):  # API는 한 번에 힌트 키워드 5개까지
