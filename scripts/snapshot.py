@@ -52,6 +52,18 @@ def allowed(url):
     return rp.can_fetch(UA, url)
 
 
+def render(url):
+    """JS로 그려지는 페이지를 위해 헤드리스 브라우저로 본문 텍스트를 얻는다."""
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as pw:
+        b = pw.chromium.launch()
+        pg = b.new_page(user_agent=UA)
+        pg.goto(url, wait_until="networkidle", timeout=60000)
+        text = pg.inner_text("body")
+        b.close()
+    return re.sub(r"\s+", " ", text).strip()
+
+
 def normalize(html):
     t = TextOnly()
     t.feed(html)
@@ -83,9 +95,13 @@ def main():
                 rec["status"] = "robots_disallowed"
             else:
                 try:
-                    html, _ = get(url)
-                    text = normalize(html)
-                    rec.update(status="ok", sha256=hashlib.sha256(text.encode()).hexdigest(), text_length=len(text))
+                    try:
+                        text, method = render(url), "browser"
+                    except Exception:
+                        html, _ = get(url)
+                        text, method = normalize(html), "html"
+                    rec.update(status="ok" if len(text) >= 200 else "thin_page", method=method,
+                               sha256=hashlib.sha256(text.encode()).hexdigest(), text_length=len(text))
                 except Exception as e:
                     rec.update(status=f"error: {type(e).__name__}")
             changed = rec.get("sha256") and (latest is None or latest.get("sha256") != rec["sha256"])

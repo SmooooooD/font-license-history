@@ -1,12 +1,12 @@
 id,name,maker,official_url,secondary_claims,status
-pretendard,Pretendard,orioncactus,https://github.com/orioncactus/pretendard,OFL(flowworks; tomorrowbliss),verify
-suit,SUIT,SUNN,https://sun.fo/suit/,OFL(flowworks),verify
-wanted-sans,Wanted Sans,Wanted Lab,https://github.com/wanteddev/wanted-sans,OFL(flowworks),verify
-spoqa-han-sans-neo,Spoqa Han Sans Neo,Spoqa,https://github.com/spoqa/spoqa-han-sans,OFL(tomorrowbliss),verify
+pretendard,Pretendard,orioncactus,https://github.com/orioncactus/pretendard,OFL(flowworks; tomorrowbliss),checked-2026-10-20
+suit,SUIT,SUNN,https://sun.fo/suit/,OFL(flowworks),checked-2026-10-20
+wanted-sans,Wanted Sans,Wanted Lab,https://github.com/wanteddev/wanted-sans,OFL(flowworks),checked-2026-10-20
+spoqa-han-sans-neo,Spoqa Han Sans Neo,Spoqa,https://github.com/spoqa/spoqa-han-sans,OFL(tomorrowbliss),checked-2026-10-20
 nanum,Nanum fonts,NAVER,https://hangeul.naver.com/fonts,OFL(flowworks) vs proprietary(tomorrowbliss) CONFLICT,verify
-gmarket-sans,Gmarket Sans,Gmarket,https://corp.gmarket.com/fonts/,OFL(flowworks),verify
-cafe24,Cafe24 fonts,Cafe24,https://fonts.cafe24.com/,OFL(flowworks),verify
+gmarket-sans,Gmarket Sans,Gmarket,https://corp.gmarket.com/fonts/,OFL(flowworks),checked-2026-10-20
+cafe24,Cafe24 fonts,Cafe24,https://fonts.cafe24.com/,OFL(flowworks),needs-license-subpage
 jalnan,Yeogi-eottae Jalnan,GC Company,https://gccompany.co.kr/font,custom(flowworks),verify
-baemin,Baemin fonts,Woowa Brothers,https://www.woowahan.com/fonts,OFL(flowworks) vs proprietary(tomorrowbliss) CONFLICT,verify
+baemin,Baemin fonts,Woowa Brothers,https://www.woowahan.com/fonts,OFL(flowworks) vs proprietary(tomorrowbliss) CONFLICT,js-rendered
 kakao,Kakao fonts,Kakao,https://design.kakao.com/fonts,proprietary(tomorrowbliss),verify
 s-core-dream,S-Core Dream,S-Core,https://www.s-core.co.kr/company/newsView.do?idx=202,OFL(flowworks via noonnu),verify
