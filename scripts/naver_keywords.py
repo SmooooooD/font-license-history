@@ -3,7 +3,7 @@
 키는 GitHub Actions Secrets에서만 읽는다. 코드와 결과에 키를 남기지 않는다.
 사용: python scripts/naver_keywords.py "키워드1,키워드2,..."
 """
-import base64, csv, urllib.error, hashlib, hmac, json, os, sys, time, urllib.parse, urllib.request
+import base64, csv, http.client, hashlib, hmac, json, os, sys, time, urllib.parse, urllib.request
 from datetime import date
 from pathlib import Path
 
@@ -25,15 +25,18 @@ def headers():
 
 
 def query(batch):
+    # urllib.request는 헤더 이름을 X-signature처럼 바꿔 버려 네이버가 서명을 못 읽는다.
+    # http.client는 헤더 이름을 그대로 보내므로 이것을 쓴다.
     q = urllib.parse.urlencode({"hintKeywords": ",".join(batch), "showDetail": "1"})
-    req = urllib.request.Request(f"{BASE}{PATH}?{q}", headers=headers())
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            return json.load(r)["keywordList"]
-    except urllib.error.HTTPError as e:
+    conn = http.client.HTTPSConnection("api.searchad.naver.com", timeout=30)
+    conn.request("GET", f"{PATH}?{q}", headers=headers())
+    r = conn.getresponse()
+    body = r.read().decode("utf-8", "replace")
+    if r.status != 200:
         # 응답 본문(오류 사유)만 출력한다. 요청 헤더나 키는 출력하지 않는다.
-        print(f"HTTP {e.code}: {e.read().decode('utf-8', 'replace')[:500]}")
-        raise
+        print(f"HTTP {r.status}: {body[:500]}")
+        sys.exit(1)
+    return json.loads(body)["keywordList"]
 
 
 def main():
