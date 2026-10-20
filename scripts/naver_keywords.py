@@ -3,7 +3,7 @@
 키는 GitHub Actions Secrets에서만 읽는다. 코드와 결과에 키를 남기지 않는다.
 사용: python scripts/naver_keywords.py "키워드1,키워드2,..."
 """
-import base64, csv, hashlib, hmac, json, os, sys, time, urllib.parse, urllib.request
+import base64, csv, urllib.error, hashlib, hmac, json, os, sys, time, urllib.parse, urllib.request
 from datetime import date
 from pathlib import Path
 
@@ -14,12 +14,12 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def headers():
     ts = str(int(time.time() * 1000))
-    secret = os.environ["NAVER_SECRET_KEY"].encode()
+    secret = os.environ["NAVER_SECRET_KEY"].strip().encode()
     sig = base64.b64encode(hmac.new(secret, f"{ts}.GET.{PATH}".encode(), hashlib.sha256).digest()).decode()
     return {
         "X-Timestamp": ts,
-        "X-API-KEY": os.environ["NAVER_ACCESS_LICENSE"],
-        "X-Customer": os.environ["NAVER_CUSTOMER_ID"],
+        "X-API-KEY": os.environ["NAVER_ACCESS_LICENSE"].strip(),
+        "X-Customer": os.environ["NAVER_CUSTOMER_ID"].strip(),
         "X-Signature": sig,
     }
 
@@ -27,8 +27,13 @@ def headers():
 def query(batch):
     q = urllib.parse.urlencode({"hintKeywords": ",".join(batch), "showDetail": "1"})
     req = urllib.request.Request(f"{BASE}{PATH}?{q}", headers=headers())
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.load(r)["keywordList"]
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.load(r)["keywordList"]
+    except urllib.error.HTTPError as e:
+        # 응답 본문(오류 사유)만 출력한다. 요청 헤더나 키는 출력하지 않는다.
+        print(f"HTTP {e.code}: {e.read().decode('utf-8', 'replace')[:500]}")
+        raise
 
 
 def main():

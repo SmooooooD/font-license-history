@@ -72,12 +72,16 @@ def normalize(html):
 
 
 def wayback(url):
-    try:
-        _, headers = get("https://web.archive.org/save/" + url, timeout=120)
-        loc = headers.get("Content-Location")
-        return "https://web.archive.org" + loc if loc else "requested"
-    except Exception as e:
-        return f"failed: {type(e).__name__}"
+    last = ""
+    for wait in (0, 20, 60):  # 익명 저장 요청은 자주 거절되므로 간격을 두고 세 번까지
+        time.sleep(wait)
+        try:
+            _, headers = get("https://web.archive.org/save/" + url, timeout=120)
+            loc = headers.get("Content-Location")
+            return "https://web.archive.org" + loc if loc else "requested"
+        except Exception as e:
+            last = f"failed: {type(e).__name__} {getattr(e, 'code', '')}".strip()
+    return last
 
 
 def main():
@@ -113,6 +117,11 @@ def main():
             time.sleep(3)
     for s in summary:
         print(*s)
+    runs = ROOT / "runs"
+    runs.mkdir(exist_ok=True)
+    (runs / "latest.json").write_text(json.dumps(
+        {"checked_at": now, "results": [dict(zip(("id", "status", "change"), s)) for s in summary]},
+        ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

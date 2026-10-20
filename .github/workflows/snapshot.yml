@@ -29,6 +29,6 @@ jobs:
         run: |
           git config user.name "font-license-history bot"
           git config user.email "actions@users.noreply.github.com"
-          git add records
+          git add records runs
           git diff --cached --quiet || git commit -m "snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
           git push
