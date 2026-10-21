@@ -61,7 +61,8 @@ def main():
                 "comp": k.get("compIdx", ""),
             })
         time.sleep(1)
-    out = ROOT / "data" / "keywords" / f"{date.today().isoformat()}.csv"
+    stamp = time.strftime("%Y-%m-%dT%H%M%S", time.gmtime())
+    out = ROOT / "data" / "keywords" / f"{stamp}.csv"
     out.parent.mkdir(parents=True, exist_ok=True)
     with open(out, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["hint", "keyword", "pc", "mobile", "comp"])
