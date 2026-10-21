@@ -59,3 +59,9 @@ c57,개인정보처리방침·이용약관,sweep,record,hold,개인정보처리�
 c58,음원·이미지 저작권 정보,sweep,record,hold,저작권없는이미지|무료BGM|유튜브저작권
 c59,이력서·자소서 양식,sweep,template,hold,이력서양식|자기소개서양식|경력기술서
 c60,사업계획서 양식,sweep,template,hold,사업계획서양식|사업계획서|IR자료
+c61,AI 독설·객관 비평 데스크(상세페이지·기획안·자소서),gemini-crosscheck,critique,hold,첨삭|자소서첨삭|상세페이지피드백
+c62,AI 실무 검증록(대신 시험해 본 워크플로),gemini-crosscheck,record,hold,챗GPT활용|AI업무자동화|프롬프트
+c63,특정 직무 전용 스프레드시트(미수금·주문·정산),gpt-crosscheck,template,hold,미수금관리|주문관리엑셀|정산엑셀
+c64,기존 문서 서식 정리·재구성,gpt-crosscheck,doc-labor,hold,문서정리|보고서양식|한글서식
+c65,온라인 판매자 상품 등록 점검표,gpt-crosscheck,template,hold,상품등록|스마트스토어상품등록|쿠팡상품등록
+c66,직군별 자소서 첨삭(병원·간호·농협 등),claude-crosscheck,critique,hold,병원자소서첨삭|간호사자소서첨삭|지역농협자소서첨삭
