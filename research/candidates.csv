@@ -1,0 +1,61 @@
+id,candidate,source,type,status,seeds
+c01,수학 시험지 한글 타이핑,claude-matrix,doc-labor,hold,시험지타이핑|한글수식|문제집타이핑
+c02,논문 서식·참고문헌 교정,claude-matrix,doc-labor,hold,논문편집|참고문헌양식|논문서식
+c03,손글씨 문서 정리·디지털화,claude-matrix,doc-labor,hold,문서타이핑|손글씨타이핑|타이핑알바
+c04,부모님 편지·일기 디지털 보존,claude-matrix,relation,hold,편지타이핑|자서전쓰기|부모님자서전
+c05,자기소개서 첨삭,claude-matrix,writing,hold,자소서첨삭|자기소개서첨삭|자소서컨설팅
+c06,축사·감사편지·결혼식 편지,claude-matrix,relation,hold,결혼식축사|주례사|부모님감사편지
+c07,가게 소개글·상세페이지 문구,claude-matrix,writing,hold,상세페이지제작|상세페이지문구|카피라이팅
+c08,블로그 글 첨삭 구독,claude-matrix,writing,hold,블로그글쓰기|블로그대행|블로그포스팅
+c09,수출 소상공인 바이어 메일 번역,claude-matrix,language,hold,무역영어|바이어메일|수출서류
+c10,외국인 생활 문서 번역,claude-matrix,language,hold,외국인임대차계약서|영문계약서번역|외국인등록
+c11,상품 상세 영어·일본어 현지화,claude-matrix,language,hold,역직구|일본어번역|쇼피파이
+c12,엑셀 수작업 자동화,claude-matrix,code,hold,엑셀자동화|엑셀매크로|VBA
+c13,엑셀 수식 오류 점검,claude-matrix,code,hold,엑셀함수|엑셀수식|엑셀오류
+c14,1쪽 포트폴리오 웹사이트,claude-matrix,code,hold,포트폴리오사이트|홈페이지제작|랜딩페이지제작
+c15,동호회 회비·출석 관리 시트,claude-matrix,code,hold,회비관리|동호회관리|모임회비
+c16,시장·경쟁사 조사 대행,claude-matrix,research,hold,시장조사|경쟁사분석|시장조사대행
+c17,보고서 사실 확인,claude-matrix,research,hold,팩트체크|자료조사|자료조사대행
+c18,발표용 데이터 시각화,claude-matrix,visual,hold,인포그래픽|데이터시각화|차트만들기
+c19,부모님 효도여행 일정 설계,claude-matrix,relation,hold,효도여행|부모님여행|여행일정짜기
+c20,공부 계획·커리큘럼 설계,claude-matrix,research,hold,공부계획표|스터디플래너|독학
+c21,연말 PPT 제작,claude-matrix,visual,hold,PPT제작|PPT디자인|발표자료
+c22,메뉴판·전단 디자인,claude-matrix,visual,hold,메뉴판디자인|전단지제작|전단지
+c23,모바일 청첩장·초대장,claude-matrix,relation,hold,모바일청첩장|셀프모바일청첩장|돌잔치초대장
+c24,노션·시트 템플릿,claude-matrix,template,hold,노션템플릿|구글시트템플릿|가계부양식
+c25,중고 물품 현장 검수,gpt,embodied,hold,중고거래사기|중고검수|직거래
+c26,이사 전후 하자 기록,gpt,embodied,hold,입주청소|하자점검|원상복구
+c27,스마트폰 방문 교육,gpt,embodied,hold,스마트폰교육|어르신스마트폰|키오스크교육
+c28,소상공인 문의 경로 점검,gpt,service,hold,네이버플레이스|스마트플레이스|가게홍보
+c29,웹사이트·앱 사용자 테스트,gpt,service,hold,앱테스트|QA테스트|사용성테스트
+c30,행사 당일 운영 보조,gpt,embodied,hold,행사스태프|행사도우미|부스운영
+c31,경매 물건 현장 실사,gemini,embodied,hold,부동산경매|경매임장|임장
+c32,독거 부모 방문 점검,gemini,embodied,hold,독거노인|부모님돌봄|방문요양
+c33,집중 감독(폰 압수),gemini,embodied,hold,공부자극|스터디카페|집중력
+c34,프리랜서 정산 독촉 대리,gemini,service,hold,프리랜서미지급|외주대금|용역비미지급
+c35,물건 정리·당근 처분 대행,gemini,embodied,hold,정리수납|당근마켓|미니멀라이프
+c36,구술 생애사 기록,gemini,relation,hold,자서전|회고록|생애사
+c37,창작자 행사 부스 보조,gemini,embodied,hold,일러스타페스|코믹월드|플리마켓
+c38,웹소설 설정 오류 검증,gemini-c,writing,hold,웹소설쓰기|웹소설작가|웹소설플랫폼
+c39,지자체 조례·고시 추적,gemini-c,record,hold,조례|고시공고|인허가
+c40,가맹 정보공개서 비교,gemini-c,record,hold,프랜차이즈창업|가맹사업정보공개서|프랜차이즈순위
+c41,크라우드펀딩 메이커 평판,gemini-c,record,hold,와디즈|크라우드펀딩|와디즈펀딩
+c42,배달·스토어 악성 리뷰 소명,gemini-c,service,hold,악성리뷰|리뷰삭제|배민리뷰
+c43,2차 창작 가이드라인 정리,gemini-c,record,hold,2차창작|팬아트|동인
+c44,빈티지 하드웨어 호환·시세,gemini-c,record,hold,필름카메라|빈티지오디오|커스텀키보드
+c45,공모전 수상작·심사평 분석,gemini-c,record,hold,공모전|대외활동|공모전수상
+c46,관리비 이상 비교,gemini-c,record,hold,아파트관리비|관리비조회|장기수선충당금
+c47,가공식품 성분 변경 추적,gemini-c,record,hold,성분표|알레르기|저당
+c48,위탁판매 지재권 위험 기록,gemini-c,record,hold,위탁판매|구매대행|지재권
+c49,정부지원사업 공고 비교,claude-c,record,hold,정부지원사업|예비창업패키지|창업지원금
+c50,폰트 약관 변경 기록,claude-c,record,running,무료폰트|폰트저작권|상업용무료폰트
+c51,AI 영리 실험 공개 연재,claude-c,story,hold,AI부업|AI로돈벌기|챗GPT부업
+c52,상표 조회 정보,sweep,record,hold,상표등록조회|상표권조회|상표등록
+c53,식전영상,sweep,relation,hold,식전영상|식전영상제작|셀프식전영상
+c54,소상공인 정책자금 정보,sweep,record,hold,소상공인정책자금|희망리턴패키지|개인사업자정책자금
+c55,무료 텍스트 도구,sweep,tool,hold,글자수세기|바이트계산기|맞춤법검사기
+c56,AI 사주·운세,sweep,content,hold,AI사주|무료사주|운세
+c57,개인정보처리방침·이용약관,sweep,record,hold,개인정보처리방침|이용약관|개인정보보호법
+c58,음원·이미지 저작권 정보,sweep,record,hold,저작권없는이미지|무료BGM|유튜브저작권
+c59,이력서·자소서 양식,sweep,template,hold,이력서양식|자기소개서양식|경력기술서
+c60,사업계획서 양식,sweep,template,hold,사업계획서양식|사업계획서|IR자료
