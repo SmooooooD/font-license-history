@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-10-20T06:06:57Z",
+  "checked_at": "2026-10-23T08:40:31Z",
   "url": "https://corp.gmarket.com/fonts/",
-  "status": "ok",
+  "status": "thin_page",
   "method": "browser",
-  "sha256": "7e473ad02689b11253beae4134f415bac44742f94e9e476baf71814f64848ad3",
-  "text_length": 2521,
+  "sha256": "be0beacc1c27a575849165d7179a97f859cc571109d0c83695a028ff3b3a5d60",
+  "text_length": 169,
   "wayback": "failed: URLError"
 }
