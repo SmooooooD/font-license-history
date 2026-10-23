@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-23T08:40:31Z",
+  "checked_at": "2026-10-23T19:20:13Z",
   "results": [
     {
       "id": "pretendard",
@@ -29,7 +29,7 @@
     {
       "id": "gmarket-sans",
       "status": "thin_page",
-      "change": "CHANGED"
+      "change": "same"
     },
     {
       "id": "cafe24",
