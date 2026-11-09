@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-08T19:45:25Z",
+  "checked_at": "2026-11-09T11:48:19Z",
   "results": [
     {
       "id": "pretendard",
@@ -39,7 +39,7 @@
     {
       "id": "jalnan",
       "status": "ok",
-      "change": "same"
+      "change": "CHANGED"
     },
     {
       "id": "baemin",

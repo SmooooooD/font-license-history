@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-11-06T11:06:46Z",
+  "checked_at": "2026-11-09T11:48:19Z",
   "url": "https://gccompany.co.kr/font",
   "status": "ok",
-  "method": "browser",
-  "sha256": "d1dd8926859e2ced954b92df9a21bb4d542f65f93bdd220a68399436023abad8",
-  "text_length": 1319,
+  "method": "html",
+  "sha256": "ee1c07e451497b1b2be16e6dd8e365166311946fae074f473ad64cb96e4f8a59",
+  "text_length": 2045,
   "wayback": "requested"
 }
