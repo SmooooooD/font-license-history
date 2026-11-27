@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-27T12:44:16Z",
+  "checked_at": "2026-11-27T23:31:32Z",
   "results": [
     {
       "id": "pretendard",
@@ -13,8 +13,8 @@
     },
     {
       "id": "wanted-sans",
-      "status": "ok",
-      "change": "same"
+      "status": "thin_page",
+      "change": "CHANGED"
     },
     {
       "id": "spoqa-han-sans-neo",

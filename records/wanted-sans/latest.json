@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-10-20T19:22:10Z",
+  "checked_at": "2026-11-27T23:31:32Z",
   "url": "https://raw.githubusercontent.com/wanteddev/wanted-sans/main/OFL.txt",
-  "status": "ok",
+  "status": "thin_page",
   "method": "browser",
-  "sha256": "0df3e16c2712ab2176bdceafdab5d6e8bc93b3f91335a02eb2c4ba6bc46e184b",
-  "text_length": 4374,
-  "wayback": "requested"
+  "sha256": "17e4ac55022f431d92b4d8beeba922fa73e792b724421e261270f8bfeb538485",
+  "text_length": 70,
+  "wayback": "failed: URLError"
 }
