@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-27T23:31:32Z",
+  "checked_at": "2026-11-28T11:58:35Z",
   "results": [
     {
       "id": "pretendard",
@@ -13,7 +13,7 @@
     },
     {
       "id": "wanted-sans",
-      "status": "thin_page",
+      "status": "ok",
       "change": "CHANGED"
     },
     {
